@@ -1,0 +1,23 @@
+palettes:
+  - name: palette
+    fixed-entries:
+      - color: { index: 0, hex: "#FFC0CB" }
+    images: automatic
+
+converts:
+  - name: tileset
+    palette: palette
+    compress: zx0
+    tilesets:
+      tile-width: 16
+      tile-height: 16
+      images:
+        - tileset.png
+
+outputs:
+  - type: c
+    include-file: tiles.h
+    palettes:
+      - palette
+    converts:
+      - tileset

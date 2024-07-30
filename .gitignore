@@ -1,0 +1,11 @@
+.vscode/
+
+# Ignore binary outputs
+bin/
+obj/
+
+# Ignore the convimg.yaml generated outputs
+src/gfx/*
+!src/gfx/convimg.yaml
+!src/gfx/tileset.png
+src/gfx/convimg.yaml.lst
