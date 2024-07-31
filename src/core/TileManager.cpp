@@ -76,7 +76,7 @@ uint24_t TileManager::getYOffset() const
 void TileManager::loadTiles()
 {
     m_tiles.reserve(tileset_num_tiles);
-    sprite_raii decomp_spr(16, 16);
+    SpriteRaii decomp_spr(16, 16);
 
     // decompress each tile and scale it to 32x32
     for (size_t i = 0; i < tileset_num_tiles; ++i)

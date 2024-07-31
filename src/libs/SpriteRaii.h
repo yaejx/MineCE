@@ -3,21 +3,21 @@
 
 #include <graphx.h>
 
-class sprite_raii {
+class SpriteRaii {
 public:
-    sprite_raii(): m_sprite(nullptr) {}
+    SpriteRaii(): m_sprite(nullptr) {}
 
-    sprite_raii(uint16_t width, uint8_t height)
+    SpriteRaii(uint16_t width, uint8_t height)
     : m_sprite(gfx_MallocSprite(width, height)) {}
 
-    ~sprite_raii() { free(m_sprite); }
+    ~SpriteRaii() { free(m_sprite); }
 
-    sprite_raii(sprite_raii&& other) noexcept
+    SpriteRaii(SpriteRaii&& other) noexcept
     : m_sprite(other.m_sprite) {
         other.m_sprite = nullptr;
     }
 
-    sprite_raii& operator=(sprite_raii&& other) noexcept {
+    SpriteRaii& operator=(SpriteRaii&& other) noexcept {
         if (this != &other) {
             free(m_sprite);
             m_sprite = other.m_sprite;

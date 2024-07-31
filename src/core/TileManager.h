@@ -2,7 +2,7 @@
 
 #include <graphx.h>
 
-#include "libs/sprite_raii.h"
+#include "libs/SpriteRaii.h"
 #include "libs/unique_ptr.h"
 #include "libs/vector.h"
 
@@ -24,6 +24,6 @@ private:
     unique_ptr<gfx_tilemap_t> m_tilemap;
     uint24_t m_xOffset;
     uint24_t m_yOffset;
-    vector<sprite_raii> m_tiles;
+    vector<SpriteRaii> m_tiles;
     unique_ptr<uint8_t[]> m_map; 
 };
