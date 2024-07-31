@@ -11,9 +11,9 @@
 
 class GameEngine
 {
+public:
     using InputManager = map<kb_lkey_t, Key>;
 
-public:
     GameEngine();
     ~GameEngine();
  

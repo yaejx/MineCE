@@ -1,3 +1,6 @@
+#ifndef SPRITE_RAII_H
+#define SPRITE_RAII_H
+
 #include <graphx.h>
 
 class sprite_raii {
@@ -28,3 +31,5 @@ public:
 private:
     gfx_sprite_t* m_sprite;
 };
+
+#endif // SPRITE_RAII_H
